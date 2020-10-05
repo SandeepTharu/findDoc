@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    android:clickable="true"
+    android:focusable="true"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewAppointmentDoctorImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="100dp"
+        app:cardCornerRadius="70dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03">
+
+        <ImageView
+            android:id="@+id/imageViewAppointmentDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_person_24" />
+    </androidx.cardview.widget.CardView>
+
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewAppointmentDoctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/cardViewAppointmentDoctorImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@id/cardViewAppointmentDoctorImage"
+        app:layout_constraintTop_toTopOf="@id/cardViewAppointmentDoctorImage"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewAppointmentRatingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Rating: "
+        android:textColor="@color/Black"
+        android:textSize="12sp"
+        app:customTextStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/textViewAppointmentDoctorName"
+        app:layout_constraintTop_toBottomOf="@id/textViewAppointmentDoctorName"
+        app:layout_constraintVertical_bias="0" />
+
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewAppointmentRatingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_rating_star"
+        android:drawablePadding="15dp"
+        android:drawableTint="@color/GreenYellow"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="@color/Black"
+        android:textSize="14sp"
+        app:customTextStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/textViewAppointmentRatingText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toEndOf="@id/textViewAppointmentRatingText"
+        app:layout_constraintTop_toTopOf="@id/textViewAppointmentRatingText" />
+
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewAppointmentMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Map:"
+        android:textSize="18sp"
+        app:customTextStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewAppointmentDoctorImage"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <com.example.finddoc.views.CustomButton
+        android:id="@+id/buttonAppointmentBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_curve"
+        android:backgroundTint="@color/IndianRed"
+        android:drawableEnd="@drawable/ic_check_circle"
+        android:drawablePadding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:text="Book"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        app:customTextStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/cardViewAppointmentMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@id/textViewAppointmentMap"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewAppointmentMap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="7dp"
+        app:cardBackgroundColor="@color/LightBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewAppointmentMap">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

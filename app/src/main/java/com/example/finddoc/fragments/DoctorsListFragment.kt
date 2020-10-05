@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.finddoc.R
 import com.example.finddoc.adapters.DoctorsListAdapter
 import com.example.finddoc.models.Doctor
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_doctors_list.*
+import kotlinx.android.synthetic.main.layout_info_bar.view.*
 
 class DoctorsListFragment(val listener: OnDoctorsListFragmentInteraction) : Fragment() {
     override fun onCreateView(

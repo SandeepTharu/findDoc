@@ -11,6 +11,7 @@ import com.example.finddoc.models.Doctor
 import com.example.finddoc.utils.AppUtil
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_profile.*
+import kotlinx.android.synthetic.main.layout_info_bar.*
 import kotlinx.android.synthetic.main.layout_info_bar.view.*
 
 
@@ -36,10 +37,6 @@ class ProfileFragment(private val doctor: Doctor, val listener: OnProfileInterac
         buttonBookAnAppointment.setOnClickListener {
             AppUtil.pushInAnimation(it,requireContext())
             listener.onBookAnAppointment(doctor)
-        }
-        activity?.layoutInfoBar?.imageViewInfoBarLogo?.setOnClickListener {
-            AppUtil.pushInAnimation(it, requireContext())
-            parentFragmentManager.popBackStack()
         }
     }
 
