@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/White"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.OnboardingActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mainActivityContainer"
+        android:id="@+id/onboardingMainContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,23 +15,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
-
-    <include
-        android:id="@+id/layoutInfoBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="10dp"
-        layout="@layout/layout_info_bar"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.02"
-        />
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

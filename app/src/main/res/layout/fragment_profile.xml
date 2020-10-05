@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewProfileDoctorImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="70dp"
+        app:cardBackgroundColor="@color/White"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="80dp"
+            >
+            <ImageView
+                android:id="@+id/imageViewProfileDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_person_24" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewProfileDoctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor's name"
+        android:textColor="@color/Black"
+        android:textSize="20sp"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewProfileDoctorImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewProfileEmailText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Email: "
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="5dp"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:customTextStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textViewProfileEmailValue"
+        app:layout_constraintTop_toTopOf="@id/textViewProfileEmailValue"
+        app:layout_constraintBottom_toBottomOf="@id/textViewProfileEmailValue"
+        app:layout_constraintHorizontal_bias="0.9"
+        />
+
+    <View
+        android:id="@+id/dummyEmailView"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewProfileDoctorName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.6"
+        />
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewProfileEmailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/dummyEmailView"
+        app:layout_constraintEnd_toEndOf="@id/dummyEmailView"
+        app:layout_constraintTop_toTopOf="@id/dummyEmailView"
+        app:layout_constraintBottom_toBottomOf="@id/dummyEmailView"
+        app:layout_constraintVertical_bias="0"
+        />
+
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewProfileMobileText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Mobile: "
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:customTextStyle="bold"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textViewProfileMobileValue"
+        app:layout_constraintTop_toTopOf="@id/textViewProfileMobileValue"
+        app:layout_constraintBottom_toBottomOf="@id/textViewProfileMobileValue"
+        app:layout_constraintHorizontal_bias="0.9"
+        />
+
+    <View
+        android:id="@+id/dummyMobileView"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewProfileEmailValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.6"
+        />
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewProfileMobileValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/dummyMobileView"
+        app:layout_constraintEnd_toEndOf="@id/dummyMobileView"
+        app:layout_constraintTop_toTopOf="@id/dummyMobileView"
+        app:layout_constraintBottom_toBottomOf="@id/dummyMobileView"
+        app:layout_constraintVertical_bias="0"
+        />
+
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewProfileCityText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="City: "
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:customTextStyle="bold"
+        android:drawableStart="@drawable/ic_city"
+        android:drawablePadding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textViewProfileCityValue"
+        app:layout_constraintTop_toTopOf="@id/textViewProfileCityValue"
+        app:layout_constraintBottom_toBottomOf="@id/textViewProfileCityValue"
+        app:layout_constraintHorizontal_bias="0.9"
+        />
+
+    <View
+        android:id="@+id/dummyCityView"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewProfileMobileValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.6"
+        />
+    <com.example.finddoc.views.CustomTextview
+        android:id="@+id/textViewProfileCityValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/dummyCityView"
+        app:layout_constraintEnd_toEndOf="@id/dummyCityView"
+        app:layout_constraintTop_toTopOf="@id/dummyCityView"
+        app:layout_constraintBottom_toBottomOf="@id/dummyCityView"
+        app:layout_constraintVertical_bias="0"
+        />
+
+    <com.example.finddoc.views.CustomButton
+        android:id="@+id/buttonBookAnAppointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_curve"
+        android:backgroundTint="@color/MediumPurple"
+        android:text="Book an appointment"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:drawableEnd="@drawable/ic_book_appointment"
+        android:drawablePadding="10dp"
+        app:customTextStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textViewProfileCityValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
